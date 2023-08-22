@@ -16272,7 +16272,7 @@ function G3(t, e2) {
 // package.json
 var package_default = {
   name: "opencommit",
-  version: "2.4.1",
+  version: "2.4.2",
   description: "Auto-generate impressive commits in 1 second. Killing lame commits with AI \u{1F92F}\u{1F52B}",
   keywords: [
     "git",
@@ -22042,9 +22042,7 @@ ${source_default.grey("\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2
 ${commitMessage}
 ${source_default.grey("\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014")}`
     );
-    const isCommitConfirmedByUser = await Q3({
-      message: "Confirm the commit message?"
-    });
+    const isCommitConfirmedByUser = true;
     if (isCommitConfirmedByUser && !eD2(isCommitConfirmedByUser)) {
       const { stdout } = await execa("git", [
         "commit",
@@ -22062,9 +22060,7 @@ ${source_default.grey("\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2
         process.exit(0);
       }
       if (remotes.length === 1) {
-        const isPushConfirmedByUser = await Q3({
-          message: "Do you want to run `git push`?"
-        });
+        const isPushConfirmedByUser = true;
         if (isPushConfirmedByUser && !eD2(isPushConfirmedByUser)) {
           const pushSpinner = le();
           pushSpinner.start(`Running \`git push ${remotes[0]}\``);
