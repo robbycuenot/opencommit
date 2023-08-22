@@ -63,9 +63,7 @@ ${commitMessage}
 ${chalk.grey('——————————————————')}`
     );
 
-    const isCommitConfirmedByUser = await confirm({
-      message: 'Confirm the commit message?'
-    });
+    const isCommitConfirmedByUser = true;
 
     if (isCommitConfirmedByUser && !isCancel(isCommitConfirmedByUser)) {
       const { stdout } = await execa('git', [
@@ -88,9 +86,7 @@ ${chalk.grey('——————————————————')}`
       }
 
       if (remotes.length === 1) {
-        const isPushConfirmedByUser = await confirm({
-          message: 'Do you want to run `git push`?'
-        });
+        const isPushConfirmedByUser = true;
 
         if (isPushConfirmedByUser && !isCancel(isPushConfirmedByUser)) {
           const pushSpinner = spinner();
